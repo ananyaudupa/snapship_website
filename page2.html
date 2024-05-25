@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="images/favicon.png" type="image/gif" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>SnapShip</title>
+    <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.NkopH92Jsh7aeZAAMbk3GQHaF7?rs=1&pid=ImgDetMain">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- Font Awesome styles -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Responsive styles -->
+    <link href="css/responsive.css" rel="stylesheet" />
+    <!-- Separate CSS file for cards -->
+    <link href="css/cards.css" rel="stylesheet" />
+    <!-- Custom styles for info section -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 300px;
+            margin: 5px;
+            padding: 15px;
+            border: 1px solid #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #ff5733;
+            /* orange color for price */
+            margin: 8px 0;
+        }
+
+        .rating {
+            color: #27ae60;
+            /* green color for rating */
+        }
+
+        .info_section {
+            background: #000000;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        .info_form_social_row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info_form {
+            display: flex;
+            align-items: center;
+        }
+
+        .info_form input {
+            width: 70%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .info_form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .social_box a {
+            margin-right: 10px;
+            color: #007bff;
+            font-size: 20px;
+        }
+
+        .info_links_menu a {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .info_insta,
+        .info_detail,
+        .info_contact {
+            margin-bottom: 20px;
+        }
+
+        .insta_box {
+            display: flex;
+            align-items: center;
+        }
+
+        .insta_box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .info_contact a {
+            display: flex;
+            align-items: center;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .info_contact i {
+            margin-right: 10px;
+            color: #007bff;
+            font-size: 20px;
+        }
+        .info_insta p,
+        .info_insta span {
+            color: gray;
+        }
+    </style>
+
+</head>
+
+<body>
+     <!-- header section strats -->
+  <header class="header_section innerpage_header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <span>
+            <b>Medicine and Medical Supplies</b>
+          </span>
+        </a>
+        <div class="" id="">
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="blog.html">Blog</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+    <!-- Your card elements here -->
+    <div class="card">
+        <img src="/images/1b.jpg" alt="Product Image">
+        <h2>Prescription Medications</h2>
+        <p class="price">M.R.P: ₹2,199 (48% off)</p>
+        <p class="rating">Rating: 4.5/5</p>
+        <p>FREE Delivery</p>
+        <p>Fastest Delivery: <span id="fastestDeliveryDate"></span></p>
+        <p>Crash MRP: ₹2,199</p>
+    </div>
+    <div class="card">
+        <img src="/images/2b.jpg" alt="Product Image">
+        <h2>Over-the-Counter Medicines</h2>
+        <p class="price">M.R.P: ₹2,199 (48% off)</p>
+        <p class="rating">Rating: 4.5/5</p>
+        <p>FREE Delivery</p>
+        <p>Fastest Delivery: <span id="fastestDeliveryDate"></span></p>
+        <p>Crash MRP: ₹2,199</p>
+    </div>
+    <div class="card">
+        <img src="/images/3b.jpg" alt="Product Image">
+        <h2>First Aid Kits</h2>
+        <p class="price">M.R.P: ₹2,199 (48% off)</p>
+        <p class="rating">Rating: 4.5/5</p>
+        <p>FREE Delivery</p>
+        <p>Fastest Delivery: <span id="fastestDeliveryDate"></span></p>
+        <p>Crash MRP: ₹2,199</p>
+    </div>
+
+
+    
+    <div class="card">
+        <img src="/images/4b.jpg" alt="Product Image">
+        <h2>Medical Devices</h2>
+        <p class="price">M.R.P: ₹2,199 (48% off)</p>
+        <p class="rating">Rating: 4.5/5</p>
+        <p>FREE Delivery</p>
+        <p>Fastest Delivery: <span id="fastestDeliveryDate"></span></p>
+        <p>Crash MRP: ₹2,199</p>
+    </div>
+
+    <!-- Info Section -->
+   
+    <!-- Info Section -->
+    <section class="info_section layout_padding2">
+        <div class="container">
+            <div class="row info_form_social_row">
+                <div class="col-md-8 col-lg-9">
+                  <div class="info_form">
+                    <form action="mailto:snapship43@gmail.com" method="post" enctype="text/plain">
+                      <input type="email" name="email" placeholder="Enter your email" required style="color: black;">
+                      <button type="submit">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+        
+                  <div class="social_box">
+                    <a href="">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="row info_main_row">
+                <div class="col-md-6 col-lg-3">
+                  <div class="info_links">
+                    <h4>
+                      Menu
+                    </h4>
+                    <div class="info_links_menu">
+                      <a href="index.html">Home</a>
+                      <a href="about.html">About</a>
+                      <a href="shop.html">Shop</a>
+                      <a href="blog.html">Blog</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="info_insta">
+                    <h4>
+                      Instagram
+                    </h4>
+                    <a href="https://www.instagram.com/snapship43?igsh=Y3oyNDc5OHIzMmtl">
+                    <div class="insta_box">
+                      <div class="img-box">
+                        <img src="/images/insta.png" alt="">
+                      </div>
+                      <p>
+                        @snapship43
+                      </p>
+                    </div>
+                   </a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="info_insta">
+                    <h4>
+                      Telegram
+                    </h4>
+                    <a href="https://t.me/snapship43">
+                      <div class="insta_box">
+                        <div class="img-box">
+                        <img src="images/tele.png" alt="">
+                        </div>
+                        <p >
+                          snapship
+                        </p>
+                      </div>
+                     
+                    </div>
+                  </a>
+                </div>  <div class="col-md-6 col-lg-3">
+                  <div class="info_insta">
+                    <h4>
+                      Youtube
+                    </h4>
+                    <a href="https://www.youtube.com/channel/UC1nO0D_GKm2zGZWgnz6o4-A">
+                      <div class="insta_box">
+                        <div class="img-box">
+                          <img src="images/yt.jpg" alt="">
+                        </div>
+                        <p>
+                          SnapShip
+                        </p>
+                      </div>
+                    </a>
+                   
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <div class="info_detail">
+                    <h4></h4>
+                    <p class="mb-0">
+                      
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                  <h4>
+                    Contact Us
+                  </h4>
+                  <div class="info_contact">
+                    <a href="">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <span>
+                        Location
+                      </span>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <span>
+                        Call +91 1234567890
+                      </span>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-envelope"></i>
+                      <span>
+                        snapship43@gmail.com
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+    <!-- End Info Section -->
+
+    <!-- Your script element here -->
+    <script>
+        // Update fastest delivery date
+        var fastestDeliveryDateElement = document.getElementById("fastestDeliveryDate");
+        var fastestDeliveryDate = new Date();
+        fastestDeliveryDate.setDate(fastestDeliveryDate.getDate() + 2); // Assuming 2 days for fastest delivery
+        fastestDeliveryDateElement.innerText = fastestDeliveryDate.toDateString() + ", " + fastestDeliveryDate.toLocaleTimeString();
+    
+        // Update automatic time and date
+        var currentDateElement = document.createElement("p");
+        currentDateElement.innerText = "Last Updated: " + new Date().toLocaleString();
+        document.body.appendChild(currentDateElement);
+    </script>
+    
+    <!-- Your additional script elements here -->
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <p>
+                &copy; <span id="displayYear"></span> All Rights Reserved By
+                <a href="https://html.design/">CCC</a>
+            </p>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+    <!-- Bootstrap JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+
+    <script>
+        // Update fastest delivery date
+        var fastestDeliveryDateElement = document.getElementById("fastestDeliveryDate");
+        var fastestDeliveryDate = new Date();
+        fastestDeliveryDate.setDate(fastestDeliveryDate.getDate() + 2); // Assuming 2 days for fastest delivery
+        fastestDeliveryDateElement.innerText = fastestDeliveryDate.toDateString() + ", " + fastestDeliveryDate.toLocaleTimeString();
+    
+        // Update automatic time and date
+        var currentDateElement = document.createElement("p");
+        currentDateElement.innerText = "Last Updated: " + new Date().toLocaleString();
+        document.body.appendChild(currentDateElement);
+    </script>
+
+</body>
+
+</html>

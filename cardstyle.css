@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 300px;
+    margin: 5 px ;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 10px;
+}
+
+p {
+    color: #666;
+}
+
+.price {
+    font-size: 18px;
+    color: #ff5733; /* orange color for price */
+    margin: 8px 0;
+}
+
+.rating {
+    color: #27ae60; /* green color for rating */
+}
